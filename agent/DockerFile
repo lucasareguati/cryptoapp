@@ -1,0 +1,9 @@
+FROM python:3.6.7
+
+WORKDIR /home/lucas/Escritorio/Facultad/Cuartoaño/NSQL/tp4 CryptoApp/Cryptongo-master/agent
+
+RUN pip3 install requests flask pymongo
+
+COPY main.py ./agent.py
+
+CMD [ "python3", "agent.py" ]
